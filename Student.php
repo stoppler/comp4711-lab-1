@@ -12,5 +12,13 @@
  * @author ry
  */
 class Student {
-    //put your code here
+    
+    //Student class constructor
+    function __construct() {
+        $this->surname = '';
+        $this->first_name = '';
+        $this->emails = array();
+        $this->grades = array();
+    }
+    
 }
