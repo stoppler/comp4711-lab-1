@@ -11,6 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+        //include the student class
         include ('Student.php');
         
         //create an array of students
@@ -38,6 +39,20 @@ and open the template in the editor.
         $second->add_grade(80);
         $second->add_grade(50);
         $students['a456'] = $second;
+        
+        //third student (myself)
+        $third = new Student();
+        $third->surname = "Stoppler";
+        $third->first_name = "Ryan";
+        $third->add_email('home','ryan@ryan.com');
+        $third->add_email('work','rstoppler1@my.bcit.ca');
+        $third->add_grade(75);
+        $third->add_grade(95);
+        $third->add_grade(85);
+        $students['r876'] = $third;
+        
+        //sort students by key
+        ksort($students);
         
         //loop through student array and print each students information
         foreach($students as $student){
